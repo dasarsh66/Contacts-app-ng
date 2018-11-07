@@ -1,0 +1,10 @@
+<p> Contact-list works! </p>
+  <p>Here is the list for ya</p>
+  <ul>
+    <li *ngFor="let contacts of contacts"
+      (click)="onSelect(contacts)">
+     <span>{{contacts.firstName}}</span> {{contacts.phoneNumbers[0]}}
+    </li>
+  </ul>
+<app-contact-details [selectedContact]="selectedContact"></app-contact-details>  
+
